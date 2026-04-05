@@ -1,203 +1,218 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCL - Secrétaire indépendante</title>
 
-<title>MCL | Marie-Christine Lassagne</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('bordeaux.jpg') no-repeat center center fixed;
-    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #3e3e3e;
+    background-color: #faf8f6;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.95)),
+                url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    animation: fadeIn 1.5s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: #b76e79;
+    letter-spacing: 4px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #7a7a7a;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #b76e79;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+/* BOUTONS */
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
     color: white;
-}
-</style>
-
-.hero{
-background-image:url("https://images.unsplash.com/photo-1599946347371-68eb71b16afc");
-background-size:cover;
-background-position:center;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+    background-color: #b76e79;
+    transition: 0.3s;
 }
 
-.overlay{
-background:rgba(0,0,0,0.55);
-width:100%;
-height:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-padding:20px;
+.btn:hover {
+    background-color: #9c5a64;
 }
 
-.logo{
-font-size:70px;
-font-weight:bold;
-letter-spacing:6px;
-color:#f2e3c6;
+/* FOOTER */
+.footer {
+    background: #f1ece8;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
 }
 
-h1{
-font-size:40px;
-margin:10px;
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
-.subtitle{
-font-size:20px;
-margin-bottom:30px;
-color:#f2e3c6;
-}
-
-.button{
-padding:15px 30px;
-margin:10px;
-border-radius:8px;
-text-decoration:none;
-font-size:18px;
-color:white;
-background:#7a0c2e;
-transition:0.3s;
-}
-
-.button:hover{
-background:#a01845;
-}
-
-.section{
-padding:80px 20px;
-text-align:center;
-background:white;
-color:#333;
-}
-
-.section h2{
-color:#7a0c2e;
-font-size:32px;
-margin-bottom:20px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:1.6;
-}
-
-.footer{
-background:#7a0c2e;
-color:white;
-text-align:center;
-padding:30px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
 
-<section class="hero">
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <div class="logo">MCL</div>
+        <h1>Marie-Christine Lassagne</h1>
+        <p class="subtitle">Secrétaire indépendante</p>
 
-<div class="overlay">
+        <p class="intro">
+            Une approche exigeante et raffinée de l’assistance administrative, 
+            pensée pour les professionnels et les particuliers en quête de sérénité, d’efficacité et de confiance.
+        </p>
 
-<div class="logo">MCL</div>
-
-<h1>Marie-Christine Lassagne</h1>
-
-<div class="subtitle">Secrétaire indépendante EI – Bordeaux</div>
-
-<a class="button" href="tel:0609207430">📞 Appeler</a>
-
-<a class="button" href="mailto:mclassagne33@gmail.com">✉️ Envoyer un email</a>
-
+        <div class="buttons">
+            <a href="tel:0609207430" class="btn">📞 Me contacter</a>
+            <a href="mailto:mclassagne33@gmail.com" class="btn">✉️ Demander un devis</a>
+        </div>
+    </div>
 </div>
 
-</section>
+<!-- SERVICES -->
+<div class="section">
+    <h2>Un accompagnement sur mesure</h2>
 
-<section class="section">
+    <div class="grid">
+        <div class="card">
+            <h3>Professionnels</h3>
+            <p>
+                Externalisez votre administratif avec élégance et efficacité. 
+                Gestion de dossiers, suivi clients, rédaction et organisation : 
+                un service fiable pour vous concentrer sur votre activité.
+            </p>
+        </div>
 
-<div class="container">
-
-<h2>Pour les professionnels</h2>
-
-<p>
-Artisans, entreprises, professions libérales ou associations : je vous propose
-un accompagnement administratif flexible et efficace.
-Externaliser votre secrétariat vous permet de gagner du temps,
-d’optimiser votre organisation et de vous concentrer sur votre cœur de métier.
-</p>
-
-<p>
-Gestion administrative, traitement des emails, rédaction de courriers,
-devis et facturation, organisation documentaire ou assistance ponctuelle :
-je m’adapte à vos besoins avec rigueur, discrétion et professionnalisme.
-</p>
-
+        <div class="card">
+            <h3>Particuliers</h3>
+            <p>
+                Simplifiez vos démarches grâce à un accompagnement humain et structuré. 
+                Courriers, formalités et organisation : une assistance claire et rassurante.
+            </p>
+        </div>
+    </div>
 </div>
 
-</section>
+<!-- VALEURS -->
+<div class="section" style="background:#f6f2ef;">
+    <h2>Une signature d’excellence</h2>
 
-<section class="section">
-
-<div class="container">
-
-<h2>Pour les particuliers</h2>
-
-<p>
-Les démarches administratives peuvent parfois être complexes ou
-chronophages. Je vous accompagne afin de simplifier votre quotidien.
-</p>
-
-<p>
-Rédaction de courriers, aide aux démarches en ligne, organisation de documents,
-suivi administratif ou constitution de dossiers :
-je vous apporte un soutien fiable et personnalisé.
-</p>
-
+    <p style="max-width:700px;margin:auto;line-height:1.7;">
+        Chaque mission est réalisée avec rigueur, discrétion et sens du détail. 
+        MCL incarne une vision exigeante de l’assistance administrative : 
+        un service fluide, fiable et parfaitement adapté à vos attentes.
+    </p>
 </div>
 
-</section>
+<!-- CONTACT -->
+<div class="section">
+    <h2>Contact</h2>
 
-<section class="section">
+    <p>
+        Une interlocutrice unique, disponible et à votre écoute pour répondre à vos besoins.
+    </p>
 
-<div class="container">
-
-<h2>Contact</h2>
-
-<p>
-📞 06 09 20 74 30  
-<br><br>
-✉️ mclassagne33@gmail.com
-</p>
-
-<a class="button" href="tel:0609207430">Appeler</a>
-
-<a class="button" href="mailto:mclassagne33@gmail.com">Envoyer un email</a>
-
+    <div class="buttons">
+        <a href="tel:0609207430" class="btn">📞 0609207430</a>
+        <a href="mailto:mclassagne33@gmail.com" class="btn">✉️ mclassagne33@gmail.com</a>
+    </div>
 </div>
 
-</section>
-
+<!-- FOOTER -->
 <div class="footer">
-
-MCL – Marie-Christine Lassagne  
-<br>
-Secrétaire indépendante EI – Bordeaux
-
+    Marie-Christine Lassagne – MCL<br>
+    Secrétaire indépendante<br><br>
+    Exigence • Discrétion • Efficacité
 </div>
 
 </body>
-
 </html>
